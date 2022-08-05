@@ -1,0 +1,3 @@
+https://zenn.dev/soma3134/articles/20220406_next
+
+npx create-next-app@latest --ts
