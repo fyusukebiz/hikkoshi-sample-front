@@ -4,7 +4,7 @@ import { css } from '@emotion/react';
 const styles = {
   title: css`
     background-color: white;
-    font-size: 24px;
+    font-size: 20px;
     color: red;
     padding: 5px;
     text-align: center;
