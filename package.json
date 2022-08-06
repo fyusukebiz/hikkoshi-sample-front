@@ -13,9 +13,12 @@
   "dependencies": {
     "@emotion/babel-plugin": "^11.10.0",
     "@emotion/react": "^11.10.0",
+    "@hookform/devtools": "^4.2.2",
+    "@hookform/error-message": "^2.0.0",
     "next": "12.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.34.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
