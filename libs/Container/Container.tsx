@@ -7,10 +7,11 @@ type Props = {
 
 const styles = {
   container: css`
-    margin: 10px 10px;
+    margin: 0 auto;
+    padding: 10px 10px;
     max-width: 600px;
     @media screen and (min-width: 600px) {
-      margin: 10px auto;
+      padding: 10px auto;
     }
   `,
 };

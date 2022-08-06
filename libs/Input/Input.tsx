@@ -49,13 +49,31 @@ type Props = JSX.IntrinsicElements['input'] & ValidateProps & CustomProps;
 
 // eslint-disable-next-line react/display-name
 export const Input = forwardRef<HTMLInputElement, Props>((props, ref) => {
-  const { invalid = true, isSubmitted = false, leftElement, rightElement, className, ...attr } = props;
+  const {
+    invalid = true,
+    isSubmitted = false,
+    leftElement,
+    rightElement,
+    className,
+    ...attr
+  } = props;
 
   return (
-    <div css={[styles.container, styles.background(invalid), styles.border(invalid, isSubmitted)]} className={className}>
-      {leftElement && <div css={[styles.sideElement, { marginRigh: 4 }]}>{leftElement}</div>}
+    <div
+      css={[
+        styles.container,
+        styles.background(invalid),
+        styles.border(invalid, isSubmitted),
+      ]}
+      className={className}
+    >
+      {leftElement && (
+        <div css={[styles.sideElement, { marginRigh: 4 }]}>{leftElement}</div>
+      )}
       <input css={styles.input} ref={ref} {...attr} />
-      {rightElement && <div css={[styles.sideElement, { marginLeft: 4 }]}>{rightElement}</div>}
+      {rightElement && (
+        <div css={[styles.sideElement, { marginLeft: 4 }]}>{rightElement}</div>
+      )}
     </div>
   );
 });

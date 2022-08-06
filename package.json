@@ -15,10 +15,16 @@
     "@emotion/react": "^11.10.0",
     "@hookform/devtools": "^4.2.2",
     "@hookform/error-message": "^2.0.0",
+    "@types/react-dates": "^21.8.3",
+    "date-fns": "^2.29.1",
     "next": "12.2.4",
     "react": "18.2.0",
+    "react-datepicker": "^4.8.0",
+    "react-dates": "^21.8.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "^7.34.0"
+    "react-hook-form": "^7.34.0",
+    "react-icons": "^4.4.0",
+    "use-postal-jp": "^2.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
@@ -32,6 +38,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/node": "18.6.4",
     "@types/react": "18.0.15",
+    "@types/react-datepicker": "^4.4.2",
     "@types/react-dom": "18.0.6",
     "babel-loader": "^8.2.5",
     "eslint": "8.21.0",
