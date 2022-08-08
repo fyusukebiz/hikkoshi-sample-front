@@ -16,7 +16,6 @@ const styles = {
     display: flex;
   `,
   contnent: css`
-    font-size: 14px;
     flex-grow: 1;
     padding-right: 10px;
   `,

@@ -14,6 +14,7 @@ import { PasswordInput } from '@/components/form/PasswordInput';
 import { CollectingDay } from '@/components/form/CollectingDay';
 import { RequestSubmitButton } from '@/components/form/RequestSubmitButton';
 import { AddressFromZipcode } from '@/components/form/AddressFromZipcode';
+import { NextPage } from 'next';
 
 const styles = {
   marginBottom: css`
@@ -27,7 +28,7 @@ const styles = {
   `,
 };
 
-const Form: FC = () => {
+const Form: NextPage = () => {
   return (
     <RequestFormProvider>
       <Container>

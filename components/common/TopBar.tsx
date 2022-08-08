@@ -1,12 +1,25 @@
 import React from 'react';
+import { css } from '@emotion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const styles = {
+  base: css`
+    display: flex;
+  `,
+  img: css`
+    object-fit: contain;
+    height: auto;
+    max-height: 50px;
+    margin: 0 auto;
+  `
+}
+
 export const TopBar = () => {
   return (
-    <div>
+    <div css={styles.base} >
       <Link href="/">
-        <Image src="/logo.png" layout="responsive" objectFit="contain" width="100%" height="12px" alt="廃品回収比べ" />
+        <img src="/logo.png" css={styles.img}/>
       </Link>
     </div>
   );

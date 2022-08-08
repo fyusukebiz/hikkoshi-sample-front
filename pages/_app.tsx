@@ -11,7 +11,7 @@ const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
         <title>{process.env.NEXT_PUBLIC_APP_TITLE}</title>
         <meta
           name="description"
-          content="引越し業者を比較＆予約できるサービスです"
+          content="廃品回収業者を比較＆予約できるサービスです"
         />
         <meta name="robots" content="noindex" />
         <link rel="icon" href="/favicon.ico" />
