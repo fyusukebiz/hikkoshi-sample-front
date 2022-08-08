@@ -15,6 +15,7 @@ import { CollectingDay } from '@/components/form/CollectingDay';
 import { RequestSubmitButton } from '@/components/form/RequestSubmitButton';
 import { AddressFromZipcode } from '@/components/form/AddressFromZipcode';
 import { NextPage } from 'next';
+import { TopBar } from '@/components/common/TopBar';
 
 const styles = {
   marginBottom: css`
@@ -31,6 +32,7 @@ const styles = {
 const Form: NextPage = () => {
   return (
     <RequestFormProvider>
+      <TopBar />
       <Container>
         <p css={styles.marginBottom}>■ 住所</p>
         <ZipCodeInput<FormInputs> name="zipcode" required />

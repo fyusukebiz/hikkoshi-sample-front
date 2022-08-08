@@ -8,7 +8,7 @@ export const AddressFromZipcode = (props: Props) => {
   const { watch } = useFormContext();
   const [address, loading, error] = usePostalJp(
     watch('zipcode'),
-    watch('zipcode').length >= 7,
+    watch('zipcode')?.length >= 7,
   );
 
   return (

@@ -1,6 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/react';
 import { Button } from '@/libs/Button'
+import Link from 'next/link';
 
 const styles = {
   base: css`
@@ -40,11 +41,13 @@ type Props = JSX.IntrinsicElements['button']
 
 export const EstimateButton = (props: Props) => {
   return (
-    <Button css={styles.base} {...props}>
-      <div css={styles.titleContainer}>
-        <span css={styles.free}>無料</span>
-        見積もりスタート
-      </div>
-    </Button>
+    <Link href="/form">
+      <Button css={styles.base} {...props}>
+        <div css={styles.titleContainer}>
+          <span css={styles.free}>無料</span>
+          見積もりスタート
+        </div>
+      </Button>
+    </Link>
   )
 }
