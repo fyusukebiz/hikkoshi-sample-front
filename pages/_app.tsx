@@ -14,7 +14,7 @@ const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
           content="廃品回収業者を比較＆予約できるサービスです"
         />
         <meta name="robots" content="noindex" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <Component {...pageProps} />
     </>

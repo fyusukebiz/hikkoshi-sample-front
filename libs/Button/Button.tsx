@@ -2,20 +2,21 @@ import React, { FC } from 'react';
 import { css } from '@emotion/react';
 
 const styles = {
-  base: css`
+  base: (bgColor: string) => css`
     display: inline-block;
     outline: none;
     cursor: pointer;
-    background-color: #0070d2;
+    background-color: ${bgColor};
+    border: 1px solid ${bgColor};;
     border-radius: 0.25rem;
-    border: 1px solid #0070d2;
     color: #fff;
     line-height: 30px;
     font-weight: 400;
     text-align: center;
     :hover {
-      background-color: #005fb2;
-      border-color: #005fb2;
+      background-color: ${bgColor};
+      border-color: ${bgColor};
+      filter: brightness(75%);
     }
     :disabled {
       background-color: #b1b1b4;
@@ -37,9 +38,12 @@ const styles = {
   `,
 };
 
-type Props = { size?: 'sm' | 'mid' | 'lg' } & JSX.IntrinsicElements['button'];
+type Props = { 
+  size?: 'sm' | 'mid' | 'lg',
+  bgColor?: string
+} & JSX.IntrinsicElements['button'];
 
 export const Button: FC<Props> = (props) => {
-  const { size = 'mid', ...attr } = props;
-  return <button css={[styles.base, styles[size]]} {...attr} />;
+  const { size = 'mid', bgColor = '#0070d2', ...attr } = props;
+  return <button css={[styles.base(bgColor), styles[size]]} {...attr} />;
 };

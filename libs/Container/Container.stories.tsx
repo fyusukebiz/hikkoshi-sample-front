@@ -1,22 +1,21 @@
 import React, { ComponentProps } from 'react';
 import { css } from '@emotion/react';
 import { Meta, Story } from '@storybook/react';
-import { Card } from './Card';
+import { Container } from './Container';
 
-type Props = ComponentProps<typeof Card>;
+type Props = ComponentProps<typeof Container>;
 
 const meta: Meta<Props> = {
-  title: 'Card',
-  component: Card,
+  title: 'Container',
+  component: Container,
   args: {
-    children: 'Card',
+    children: 'Container',
   },
 };
 
 const Template: Story<Props> = ({ children, ...args }) => (
   <>
-    <Card {...args}>{children}</Card>
-    <Card {...args}  css={css`background-color: red; color: white;`}>{children}</Card>
+    <Container {...args} style={{ background: "red" }}>{children}</Container>
   </>
 );
 

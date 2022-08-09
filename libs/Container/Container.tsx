@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 
 type Props = {
   children: React.ReactNode;
-};
+} & JSX.IntrinsicElements['div'];
 
 const styles = {
   container: css`
@@ -16,6 +16,6 @@ const styles = {
   `,
 };
 
-export const Container: FC<Props> = ({ children }) => {
-  return <div css={styles.container}>{children}</div>;
+export const Container: FC<Props> = ({ children, ...attr }) => {
+  return <div css={styles.container} {...attr}>{children}</div>;
 };
