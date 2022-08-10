@@ -1,6 +1,8 @@
-import Axios, { AxiosInstance } from 'axios';
+import Axios, { AxiosInstance, AxiosResponse } from 'axios';
 
 let axiosApi: AxiosInstance;
+
+export type AxiosApiResponse<T = any, D = any> = AxiosResponse<T, D>;
 
 export const getAxiosApi = (): AxiosInstance => {
   if (axiosApi) return axiosApi;

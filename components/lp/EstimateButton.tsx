@@ -41,13 +41,15 @@ type Props = JSX.IntrinsicElements['button']
 
 export const EstimateButton = (props: Props) => {
   return (
-    <Link href="/form">
-      <Button css={styles.base} {...props}>
-        <div css={styles.titleContainer}>
-          <span css={styles.free}>無料</span>
-          見積もりスタート
-        </div>
-      </Button>
+    <Link href="/form" passHref>
+      <a css={css`text-decoration: none;`}>
+        <Button css={styles.base} {...props}>
+          <div css={styles.titleContainer}>
+            <span css={styles.free}>無料</span>
+            見積もりスタート
+          </div>
+        </Button>
+      </a>
     </Link>
   )
 }
